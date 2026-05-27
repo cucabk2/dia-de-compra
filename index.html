@@ -6,6 +6,19 @@
   <title>Dia de Compra — TV 50 Polegadas Copa 2026</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <!-- Facebook Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '375721718910264');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=375721718910264&ev=PageView&noscript=1"/></noscript>
+  <!-- End Facebook Pixel -->
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -549,9 +562,7 @@
     // Se quiseres rastrear cliques via evento, adiciona aqui:
     document.querySelectorAll('.cta-btn').forEach(btn => {
       btn.addEventListener('click', () => {
-        // Podes adicionar aqui: Facebook Pixel, Google Analytics, etc.
-        // fbq('track', 'InitiateCheckout');
-        // gtag('event', 'conversion');
+        fbq('track', 'InitiateCheckout');
       });
     });
   </script>
