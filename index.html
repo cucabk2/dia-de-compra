@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dia de Compra — TV 50 Polegadas Copa 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --verde:   #00a650;
+      --verde2:  #007a3d;
+      --ouro:    #f5c518;
+      --escuro:  #0d0d0d;
+      --cinza:   #1a1a1a;
+      --texto:   #f0f0f0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--escuro);
+      color: var(--texto);
+      line-height: 1.5;
+    }
+
+    /* ── BARRA URGÊNCIA ─────────────────────────────── */
+    .urgencia-bar {
+      background: var(--ouro);
+      color: #000;
+      text-align: center;
+      padding: 10px 16px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+    }
+    .urgencia-bar span { font-size: 1.1rem; }
+
+    /* ── HEADER ─────────────────────────────────────── */
+    header {
+      background: var(--cinza);
+      border-bottom: 3px solid var(--ouro);
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+    .logo-texto {
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: var(--ouro);
+      letter-spacing: 1px;
+    }
+    .logo-texto span { color: var(--verde); }
+
+    /* ── HERO ───────────────────────────────────────── */
+    .hero {
+      background: linear-gradient(160deg, #111 0%, #1c1c1c 100%);
+      padding: 40px 20px 30px;
+      text-align: center;
+      border-bottom: 1px solid #2a2a2a;
+    }
+    .badge-copa {
+      display: inline-block;
+      background: var(--ouro);
+      color: #000;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+    .hero h1 {
+      font-size: clamp(1.6rem, 5vw, 2.6rem);
+      font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+    .hero h1 .destaque { color: var(--ouro); }
+    .hero .sub {
+      font-size: 1rem;
+      color: #aaa;
+      margin-bottom: 28px;
+    }
+
+    /* ── IMAGEM PRODUTO ─────────────────────────────── */
+    .produto-img {
+      max-width: 380px;
+      width: 100%;
+      margin: 0 auto 28px;
+      display: block;
+      border-radius: 12px;
+      border: 2px solid #2a2a2a;
+    }
+    /* placeholder quando não há imagem */
+    .produto-placeholder {
+      max-width: 380px;
+      width: 100%;
+      height: 220px;
+      margin: 0 auto 28px;
+      background: #1e1e1e;
+      border: 2px dashed #333;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #555;
+      font-size: 0.85rem;
+    }
+    .produto-placeholder svg { margin-bottom: 8px; opacity: 0.4; }
+
+    /* ── COUNTDOWN ──────────────────────────────────── */
+    .countdown-wrap {
+      margin-bottom: 28px;
+    }
+    .countdown-label {
+      font-size: 0.8rem;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+    }
+    .bloco {
+      background: #1e1e1e;
+      border: 1px solid #333;
+      border-radius: 10px;
+      padding: 10px 16px;
+      min-width: 64px;
+      text-align: center;
+    }
+    .bloco .num {
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--ouro);
+      line-height: 1;
+      display: block;
+    }
+    .bloco .leg {
+      font-size: 0.65rem;
+      color: #777;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── PREÇO ──────────────────────────────────────── */
+    .preco-box {
+      background: #161616;
+      border: 1px solid #2a2a2a;
+      border-radius: 16px;
+      padding: 24px 20px;
+      max-width: 420px;
+      margin: 0 auto 28px;
+    }
+    .preco-de {
+      font-size: 0.85rem;
+      color: #666;
+      text-decoration: line-through;
+    }
+    .preco-por {
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: var(--verde);
+    }
+    .preco-parcela {
+      font-size: 0.85rem;
+      color: #aaa;
+      margin-top: 4px;
+    }
+    .preco-parcela strong { color: var(--ouro); }
+    .comissao-tag {
+      display: inline-block;
+      margin-top: 12px;
+      background: #0d2b1a;
+      border: 1px solid var(--verde2);
+      color: var(--verde);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+
+    /* ── BOTÃO CTA ──────────────────────────────────── */
+    .cta-btn {
+      display: block;
+      width: 100%;
+      max-width: 420px;
+      margin: 0 auto 16px;
+      background: var(--verde);
+      color: #fff;
+      font-size: 1.15rem;
+      font-weight: 800;
+      text-align: center;
+      padding: 18px 20px;
+      border-radius: 12px;
+      text-decoration: none;
+      letter-spacing: 0.3px;
+      transition: background 0.2s, transform 0.15s;
+      border: none;
+      cursor: pointer;
+    }
+    .cta-btn:hover { background: var(--verde2); transform: scale(1.02); }
+    .cta-btn:active { transform: scale(0.98); }
+    .cta-sub {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #666;
+      margin-bottom: 36px;
+    }
+
+    /* ── BENEFÍCIOS ─────────────────────────────────── */
+    .beneficios {
+      padding: 32px 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .beneficios h2 {
+      text-align: center;
+      font-size: 1.2rem;
+      color: var(--ouro);
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    .grid-ben {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .ben-item {
+      background: #161616;
+      border: 1px solid #2a2a2a;
+      border-radius: 12px;
+      padding: 16px 14px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .ben-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 1px; }
+    .ben-texto strong { display: block; font-size: 0.9rem; color: #fff; }
+    .ben-texto span { font-size: 0.78rem; color: #888; }
+
+    /* ── SPECS ──────────────────────────────────────── */
+    .specs {
+      background: #111;
+      border-top: 1px solid #222;
+      border-bottom: 1px solid #222;
+      padding: 28px 20px;
+    }
+    .specs h2 {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #fff;
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+    .specs-lista {
+      max-width: 480px;
+      margin: 0 auto;
+      list-style: none;
+    }
+    .specs-lista li {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid #222;
+      font-size: 0.88rem;
+    }
+    .specs-lista li:last-child { border-bottom: none; }
+    .specs-lista .spec-nome { color: #888; }
+    .specs-lista .spec-val { color: #fff; font-weight: 600; }
+
+    /* ── PROVA SOCIAL ───────────────────────────────── */
+    .prova {
+      padding: 32px 20px;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+    .prova h2 {
+      text-align: center;
+      font-size: 1.1rem;
+      color: var(--ouro);
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    .depo {
+      background: #161616;
+      border: 1px solid #2a2a2a;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 12px;
+    }
+    .estrelas { color: var(--ouro); font-size: 1rem; margin-bottom: 6px; }
+    .depo p { font-size: 0.88rem; color: #ccc; margin-bottom: 6px; }
+    .depo-autor { font-size: 0.78rem; color: #666; }
+
+    /* ── CTA FINAL ──────────────────────────────────── */
+    .cta-final {
+      background: linear-gradient(160deg, #0a2016 0%, #0d1a0f 100%);
+      border-top: 2px solid var(--verde2);
+      padding: 36px 20px;
+      text-align: center;
+    }
+    .cta-final h2 {
+      font-size: 1.5rem;
+      font-weight: 900;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+    .cta-final h2 span { color: var(--ouro); }
+    .cta-final p { color: #aaa; margin-bottom: 24px; font-size: 0.9rem; }
+
+    /* ── FOOTER ─────────────────────────────────────── */
+    footer {
+      background: #0a0a0a;
+      border-top: 1px solid #1a1a1a;
+      text-align: center;
+      padding: 20px 16px;
+      font-size: 0.75rem;
+      color: #444;
+    }
+
+    /* ── RESPONSIVO ─────────────────────────────────── */
+    @media (max-width: 400px) {
+      .grid-ben { grid-template-columns: 1fr; }
+      .bloco { min-width: 52px; padding: 8px 10px; }
+      .bloco .num { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BARRA URGÊNCIA -->
+  <div class="urgencia-bar">
+    ⚽ <span>Copa do Mundo 2026</span> começa em breve — garante a tua TV antes que acabe!
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo-texto">DIA DE<span>COMPRA</span></div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="badge-copa">⚽ Oferta Especial Copa 2026</div>
+
+    <h1>
+      Assiste cada jogo como<br />
+      <span class="destaque">nunca viste antes</span>
+    </h1>
+    <p class="sub">TV 50" 4K Ultra HD — imagem perfeita para cada golo</p>
+
+    <!-- IMAGEM DO PRODUTO -->
+    <img class="produto-img" src="https://http2.mlstatic.com/D_NQ_NP_2X_681127-MLB95141203574_102025-F.webp" alt="Smart TV Samsung 50 polegadas 4K Crystal Ultra HD" />
+
+    <!-- COUNTDOWN -->
+    <div class="countdown-wrap">
+      <div class="countdown-label">⏳ Copa começa em</div>
+      <div class="countdown">
+        <div class="bloco"><span class="num" id="cd-dias">--</span><span class="leg">Dias</span></div>
+        <div class="bloco"><span class="num" id="cd-horas">--</span><span class="leg">Horas</span></div>
+        <div class="bloco"><span class="num" id="cd-min">--</span><span class="leg">Min</span></div>
+        <div class="bloco"><span class="num" id="cd-seg">--</span><span class="leg">Seg</span></div>
+      </div>
+    </div>
+
+    <!-- PREÇO -->
+    <div class="preco-box">
+      <div class="preco-de">De R$2.789</div>
+      <div class="preco-por">R$2.295</div>
+      <div class="preco-parcela">
+        ou <strong>12x de R$220,59</strong> sem juros no cartão
+      </div>
+      <div class="comissao-tag">✅ Frete Grátis • Entrega Rápida</div>
+    </div>
+
+    <!-- BOTÃO PRINCIPAL -->
+    <!-- SUBSTITUI o href pelo teu link de afiliado do Mercado Livre -->
+    <a href="https://meli.la/1mQjzmk" class="cta-btn" id="cta-principal" target="_blank" rel="noopener">
+      🛒 GARANTIR MINHA TV AGORA
+    </a>
+    <p class="cta-sub">🔒 Compra segura via Mercado Livre • Proteção ao comprador</p>
+  </section>
+
+  <!-- BENEFÍCIOS -->
+  <section class="beneficios">
+    <h2>Por que comprar agora?</h2>
+    <div class="grid-ben">
+      <div class="ben-item">
+        <div class="ben-icon">📦</div>
+        <div class="ben-texto">
+          <strong>Entrega Rápida</strong>
+          <span>Recebe antes da Copa começar</span>
+        </div>
+      </div>
+      <div class="ben-item">
+        <div class="ben-icon">💳</div>
+        <div class="ben-texto">
+          <strong>12x sem juros</strong>
+          <span>R$220/mês no cartão</span>
+        </div>
+      </div>
+      <div class="ben-item">
+        <div class="ben-icon">🚚</div>
+        <div class="ben-texto">
+          <strong>Frete Grátis</strong>
+          <span>Para todo o Brasil</span>
+        </div>
+      </div>
+      <div class="ben-item">
+        <div class="ben-icon">🛡️</div>
+        <div class="ben-texto">
+          <strong>Garantia total</strong>
+          <span>Protecção Mercado Livre</span>
+        </div>
+      </div>
+      <div class="ben-item">
+        <div class="ben-icon">↩️</div>
+        <div class="ben-texto">
+          <strong>Devolução fácil</strong>
+          <span>30 dias sem perguntas</span>
+        </div>
+      </div>
+      <div class="ben-item">
+        <div class="ben-icon">⚡</div>
+        <div class="ben-texto">
+          <strong>Estoque limitado</strong>
+          <span>Alta procura pré-copa</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESPECIFICAÇÕES -->
+  <section class="specs">
+    <h2>Especificações Técnicas</h2>
+    <ul class="specs-lista">
+      <li>
+        <span class="spec-nome">Tamanho do ecrã</span>
+        <span class="spec-val">50 Polegadas</span>
+      </li>
+      <li>
+        <span class="spec-nome">Resolução</span>
+        <span class="spec-val">4K Ultra HD (3840×2160)</span>
+      </li>
+      <li>
+        <span class="spec-nome">Smart TV</span>
+        <span class="spec-val">Sim — Wi-Fi integrado</span>
+      </li>
+      <li>
+        <span class="spec-nome">HDR</span>
+        <span class="spec-val">HDR10 / Dolby Vision</span>
+      </li>
+      <li>
+        <span class="spec-nome">Entradas HDMI</span>
+        <span class="spec-val">3x HDMI + 2x USB</span>
+      </li>
+      <li>
+        <span class="spec-nome">Sistema</span>
+        <span class="spec-val">Tizen OS (Samsung)</span>
+      </li>
+      <li>
+        <span class="spec-nome">Preço</span>
+        <span class="spec-val" style="color: var(--verde);">R$2.295 — Frete Grátis</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- PROVA SOCIAL -->
+  <section class="prova">
+    <h2>⭐ O que estão a dizer</h2>
+
+    <div class="depo">
+      <div class="estrelas">★★★★★</div>
+      <p>"Chegou em 2 dias! Imagem incrível, já instalei na sala para a Copa. Vale muito cada centavo."</p>
+      <div class="depo-autor">— Carlos M. • São Paulo, SP</div>
+    </div>
+
+    <div class="depo">
+      <div class="estrelas">★★★★★</div>
+      <p>"Comprei para ver os jogos com a família. A qualidade da imagem é absurda, parece cinema em casa."</p>
+      <div class="depo-autor">— Fernanda R. • Rio de Janeiro, RJ</div>
+    </div>
+
+    <div class="depo">
+      <div class="estrelas">★★★★☆</div>
+      <p>"Ótima TV pelo preço. O Smart TV funciona muito bem, Netflix e YouTube perfeitos."</p>
+      <div class="depo-autor">— Rodrigo A. • Belo Horizonte, MG</div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta-final">
+    <h2>Não percas nenhum <span>golo</span> da Copa</h2>
+    <p>Estoque limitado — preço pode subir a qualquer momento</p>
+
+    <a href="https://meli.la/1mQjzmk" class="cta-btn" id="cta-final-btn" target="_blank" rel="noopener">
+      🛒 QUERO A MINHA TV AGORA
+    </a>
+    <p style="font-size:0.78rem; color:#555; margin-top:12px;">
+      Redirecionamento seguro para o Mercado Livre
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Esta página contém links de afiliado. Ao comprar você ajuda a manter este site sem custo adicional para si.</p>
+    <p style="margin-top:6px;">© 2026 Dia de Compra · Todos os direitos reservados</p>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    // ── Countdown para 11 de Junho de 2026 (início Copa) ──
+    const CUP_DATE = new Date('2026-06-11T00:00:00');
+
+    function updateCountdown() {
+      const agora = new Date();
+      const diff  = CUP_DATE - agora;
+
+      if (diff <= 0) {
+        document.querySelector('.countdown-wrap').innerHTML =
+          '<p style="color:var(--ouro);font-weight:700;">⚽ A Copa já começou!</p>';
+        return;
+      }
+
+      const dias  = Math.floor(diff / 86400000);
+      const horas = Math.floor((diff % 86400000) / 3600000);
+      const min   = Math.floor((diff % 3600000)  / 60000);
+      const seg   = Math.floor((diff % 60000)    / 1000);
+
+      document.getElementById('cd-dias').textContent  = String(dias).padStart(2,'0');
+      document.getElementById('cd-horas').textContent = String(horas).padStart(2,'0');
+      document.getElementById('cd-min').textContent   = String(min).padStart(2,'0');
+      document.getElementById('cd-seg').textContent   = String(seg).padStart(2,'0');
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // ── Clique nos botões CTA — substitui os href pelos teus links ──
+    // Se quiseres rastrear cliques via evento, adiciona aqui:
+    document.querySelectorAll('.cta-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Podes adicionar aqui: Facebook Pixel, Google Analytics, etc.
+        // fbq('track', 'InitiateCheckout');
+        // gtag('event', 'conversion');
+      });
+    });
+  </script>
+
+</body>
+</html>
