@@ -1,830 +1,195 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Melhores TVs para a Copa 2026 — Ofertas com Desconto | Dia de Compra</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
-  <!-- Facebook Pixel -->
-  <script>
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-    document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '375721718910264');
-    fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=375721718910264&ev=PageView&noscript=1"/></noscript>
-  <!-- End Facebook Pixel -->
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O segredo dos homens que falam com confiança</title>
+<!-- ====================================================================
+     PRÉ-VENDA (advertorial) — O Código da Coragem
+     ÂNGULO LIMPO: confiança / comunicação / vencer a timidez.
+     NUNCA falar em "pegar mulheres", "sedução" ou dizer "você é tímido"
+     (a Meta proíbe atributos pessoais). Usar sempre "muitos homens...".
 
-    :root {
-      --verde:   #00a650;
-      --verde2:  #007a3d;
-      --ouro:    #f5c518;
-      --escuro:  #041a08;
-      --cinza:   #0b2412;
-      --texto:   #f0f0f0;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(160deg, #0a2e12 0%, #0d3a1a 40%, #0a2e12 100%);
-      background-attachment: fixed;
-      color: var(--texto);
-      line-height: 1.5;
-    }
-
-    #football-canvas {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      z-index: 0;
-      pointer-events: none;
-    }
-    body > *:not(#football-canvas) { position: relative; z-index: 1; }
-
-    /* ── URGÊNCIA ── */
-    .urgencia-bar {
-      background: linear-gradient(90deg, var(--ouro) 0%, #ffd700 100%);
-      color: #000;
-      text-align: center;
-      padding: 10px 16px;
-      font-weight: 700;
-      font-size: 0.9rem;
-      letter-spacing: 0.5px;
-    }
-
-    /* ── HEADER ── */
-    header {
-      background: rgba(13,58,26,0.82);
-      border-bottom: 3px solid var(--ouro);
-      padding: 14px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-    }
-    .logo-texto {
-      font-size: 1.4rem;
-      font-weight: 900;
-      color: var(--ouro);
-      letter-spacing: 1px;
-    }
-    .logo-texto span { color: var(--verde); }
-
-    /* ── HERO ── */
-    .hero {
-      background: linear-gradient(160deg, rgba(13,58,26,0.72) 0%, rgba(21,92,40,0.68) 50%, rgba(13,58,26,0.72) 100%);
-      padding: 40px 20px 36px;
-      text-align: center;
-      border-bottom: 2px solid rgba(0,166,80,0.4);
-    }
-    .badge-copa {
-      display: inline-block;
-      background: var(--ouro);
-      color: #000;
-      font-size: 0.75rem;
-      font-weight: 700;
-      padding: 4px 14px;
-      border-radius: 20px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 14px;
-    }
-    .hero h1 {
-      font-size: clamp(1.6rem, 5vw, 2.4rem);
-      font-weight: 900;
-      line-height: 1.2;
-      margin-bottom: 8px;
-    }
-    .hero h1 .destaque { color: var(--ouro); }
-    .hero .sub {
-      font-size: 1rem;
-      color: #aaa;
-      margin-bottom: 28px;
-      max-width: 500px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    /* ── COUNTDOWN ── */
-    .countdown-wrap { margin-bottom: 0; }
-    .countdown-label {
-      font-size: 0.8rem;
-      color: #888;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 10px;
-    }
-    .countdown {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-    }
-    .bloco {
-      background: rgba(8,40,16,0.7);
-      border: 1px solid rgba(0,166,80,0.3);
-      border-radius: 10px;
-      padding: 10px 16px;
-      min-width: 64px;
-      text-align: center;
-    }
-    .bloco .num {
-      font-size: 2rem;
-      font-weight: 900;
-      color: var(--ouro);
-      line-height: 1;
-      display: block;
-    }
-    .bloco .leg {
-      font-size: 0.65rem;
-      color: #777;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    /* ── SEÇÃO GRADE DE TVS ── */
-    .tvs-section {
-      padding: 40px 16px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    .tvs-section-title {
-      text-align: center;
-      font-size: 1.4rem;
-      font-weight: 900;
-      color: #fff;
-      margin-bottom: 6px;
-    }
-    .tvs-section-title span { color: var(--ouro); }
-    .tvs-section-sub {
-      text-align: center;
-      font-size: 0.88rem;
-      color: #888;
-      margin-bottom: 32px;
-    }
-
-    /* Grade de cards */
-    .tvs-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 20px;
-    }
-
-    /* Card individual de TV */
-    .tv-card {
-      background: rgba(5,20,8,0.88);
-      border: 1px solid rgba(0,166,80,0.25);
-      border-radius: 16px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.2s, border-color 0.2s;
-    }
-    .tv-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(0,166,80,0.6);
-    }
-
-    .tv-card-img-wrap {
-      background: #0a1f0e;
-      padding: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 180px;
-      position: relative;
-    }
-    .tv-card-img-wrap img {
-      max-width: 100%;
-      max-height: 160px;
-      object-fit: contain;
-      border-radius: 8px;
-    }
-    .tv-desconto-badge {
-      position: absolute;
-      top: 12px;
-      left: 12px;
-      background: #c0392b;
-      color: #fff;
-      font-size: 0.78rem;
-      font-weight: 800;
-      padding: 4px 10px;
-      border-radius: 20px;
-    }
-    .tv-marca-badge {
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      background: #1428A0;
-      color: #fff;
-      font-size: 0.7rem;
-      font-weight: 700;
-      padding: 4px 10px;
-      border-radius: 20px;
-    }
-    .tv-marca-badge.lg    { background: #a50034; }
-    .tv-marca-badge.tcl   { background: #1e4fa3; }
-    .tv-marca-badge.philips { background: #00629b; }
-    .tv-marca-badge.aoc   { background: #e4002b; }
-
-    .tv-card-body {
-      padding: 18px 18px 0;
-      flex: 1;
-    }
-    .tv-card-nome {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 10px;
-      line-height: 1.3;
-    }
-    .tv-specs-mini {
-      list-style: none;
-      margin-bottom: 14px;
-    }
-    .tv-specs-mini li {
-      font-size: 0.78rem;
-      color: #888;
-      padding: 3px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.05);
-      display: flex;
-      justify-content: space-between;
-    }
-    .tv-specs-mini li:last-child { border-bottom: none; }
-    .tv-specs-mini .sv { color: #ccc; font-weight: 600; }
-
-    .tv-preco-box {
-      padding: 14px 18px;
-    }
-    .tv-preco-de {
-      font-size: 0.8rem;
-      color: #555;
-      text-decoration: line-through;
-    }
-    .tv-preco-por {
-      font-size: 1.8rem;
-      font-weight: 900;
-      color: var(--verde);
-      line-height: 1.1;
-    }
-    .tv-preco-parcela {
-      font-size: 0.78rem;
-      color: #888;
-      margin-top: 2px;
-    }
-    .tv-preco-parcela strong { color: var(--ouro); }
-
-    .tv-card-footer {
-      padding: 0 18px 18px;
-    }
-    .tv-cta-btn {
-      display: block;
-      width: 100%;
-      background: var(--verde);
-      color: #fff;
-      font-size: 0.95rem;
-      font-weight: 800;
-      text-align: center;
-      padding: 14px 16px;
-      border-radius: 10px;
-      text-decoration: none;
-      letter-spacing: 0.2px;
-      transition: background 0.2s, transform 0.15s;
-      border: none;
-      cursor: pointer;
-      margin-bottom: 8px;
-    }
-    .tv-cta-btn:hover { background: var(--verde2); transform: scale(1.02); }
-    .tv-cta-btn:active { transform: scale(0.98); }
-    .tv-cta-sub {
-      text-align: center;
-      font-size: 0.72rem;
-      color: #555;
-    }
-
-    /* ── CONFIANÇA ── */
-    .confianca {
-      background: #0b1f12;
-      border-top: 1px solid #1a3d24;
-      border-bottom: 1px solid #1a3d24;
-      padding: 24px 20px;
-      text-align: center;
-    }
-    .confianca-title {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--verde);
-      margin-bottom: 16px;
-    }
-    .confianca-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    .confianca-item {
-      background: #0d2b1a;
-      border: 1px solid var(--verde2);
-      color: #ccc;
-      font-size: 0.82rem;
-      font-weight: 600;
-      padding: 6px 14px;
-      border-radius: 20px;
-    }
-
-    /* ── PROVA SOCIAL ── */
-    .prova {
-      padding: 32px 20px;
-      max-width: 560px;
-      margin: 0 auto;
-    }
-    .prova h2 {
-      text-align: center;
-      font-size: 1.1rem;
-      color: var(--ouro);
-      margin-bottom: 20px;
-      font-weight: 700;
-    }
-    .depo {
-      background: rgba(8,32,14,0.75);
-      border: 1px solid rgba(0,166,80,0.2);
-      border-radius: 12px;
-      padding: 16px;
-      margin-bottom: 12px;
-    }
-    .estrelas { color: var(--ouro); font-size: 1rem; margin-bottom: 6px; }
-    .depo p { font-size: 0.88rem; color: #ccc; margin-bottom: 6px; }
-    .depo-autor { font-size: 0.78rem; color: #666; }
-
-    /* ── FOOTER ── */
-    footer {
-      background: rgba(2,8,4,0.9);
-      border-top: 1px solid rgba(0,166,80,0.15);
-      text-align: center;
-      padding: 20px 16px;
-      font-size: 0.75rem;
-      color: #444;
-    }
-
-    /* ── RESPONSIVO ── */
-    @media (max-width: 400px) {
-      .bloco { min-width: 52px; padding: 8px 10px; }
-      .bloco .num { font-size: 1.6rem; }
-      .tvs-grid { grid-template-columns: 1fr; }
-    }
-    @media (min-width: 600px) and (max-width: 899px) {
-      .tvs-grid { grid-template-columns: 1fr 1fr; }
-    }
-  </style>
+     COMO USAR:
+     1) Troca SEU_LINK_DE_AFILIADO (3 lugares) pelo teu link da Kiwify.
+     2) Cola o teu Pixel da Meta onde está <!-- PIXEL META AQUI -->.
+     3) Publica (GitHub Pages, Vercel, Netlify ou qualquer host).
+==================================================================== -->
+<!-- ===================== PIXEL DA META =====================
+     👉 TROCA  SEU_PIXEL_ID  pelo teu ID (15-16 dígitos), nos 3 lugares abaixo.
+     Onde achar: Gerenciador de Anúncios → Gerenciador de Eventos →
+     o teu conjunto de dados/pixel → o número aparece no topo.
+========================================================= -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', 'SEU_PIXEL_ID');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"/></noscript>
+<!-- =================== FIM PIXEL DA META =================== -->
+<style>
+  :root{
+    --azul:#0d1b2a; --azul2:#1b263b; --dourado:#e0a93b; --texto:#1a1a1a; --cinza:#5b5b5b;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--texto);line-height:1.6;background:#fff;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:680px;margin:0 auto;padding:0 20px}
+  header{background:var(--azul);color:#fff;padding:10px 0;text-align:center;font-size:13px;letter-spacing:.5px}
+  .hero{padding:34px 0 10px}
+  .tag{display:inline-block;background:#fdeccf;color:#8a5a00;font-size:12px;font-weight:700;padding:5px 12px;border-radius:30px;margin-bottom:16px;text-transform:uppercase;letter-spacing:.5px}
+  h1{font-size:30px;line-height:1.25;margin-bottom:14px;color:var(--azul)}
+  h1 span{color:var(--dourado)}
+  .sub{font-size:18px;color:var(--cinza);margin-bottom:8px}
+  .autor{font-size:14px;color:#8a8a8a;margin:18px 0;border-left:3px solid var(--dourado);padding-left:12px}
+  .lead{font-size:18px;margin:18px 0}
+  p{margin:14px 0;font-size:17px}
+  .destaque{background:#f6f8fb;border:1px solid #e3e9f2;border-radius:12px;padding:18px 20px;margin:22px 0;font-size:17px}
+  .destaque b{color:var(--azul)}
+  h2{font-size:23px;color:var(--azul);margin:30px 0 6px}
+  ul.check{list-style:none;margin:18px 0}
+  ul.check li{padding:8px 0 8px 32px;position:relative;font-size:17px}
+  ul.check li:before{content:"✔";position:absolute;left:0;top:8px;color:var(--dourado);font-weight:700}
+  /* QUIZ */
+  .quiz{background:var(--azul);color:#fff;border-radius:16px;padding:26px 22px;margin:30px 0;text-align:center}
+  .quiz h3{font-size:21px;margin-bottom:6px}
+  .quiz p{color:#c9d3e0;font-size:15px;margin:6px 0 18px}
+  .opt{display:block;width:100%;background:#22324a;color:#fff;border:1px solid #34465f;border-radius:10px;
+       padding:15px;margin:9px 0;font-size:16px;cursor:pointer;transition:.15s;text-align:left}
+  .opt:hover{background:#2c4060;border-color:var(--dourado)}
+  .step{display:none}
+  .step.active{display:block;animation:fade .3s}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1}}
+  .progress{height:6px;background:#22324a;border-radius:6px;margin-bottom:18px;overflow:hidden}
+  .bar{height:100%;width:0;background:var(--dourado);transition:width .4s}
+  .cta{display:block;background:var(--dourado);color:#1a1300;font-weight:800;font-size:19px;text-align:center;
+       text-decoration:none;padding:18px 20px;border-radius:12px;margin:14px 0;box-shadow:0 6px 18px rgba(224,169,59,.4)}
+  .cta:active{transform:translateY(1px)}
+  .mini{font-size:13px;color:#9fb0c4;margin-top:8px}
+  .prova{display:flex;gap:14px;align-items:center;background:#f6f8fb;border-radius:12px;padding:16px;margin:16px 0}
+  .prova .num{font-size:30px;font-weight:800;color:var(--dourado);line-height:1}
+  footer{background:var(--azul);color:#8ea0b6;font-size:12px;text-align:center;padding:26px 20px;margin-top:40px;line-height:1.7}
+  footer a{color:#b9c6d6}
+  .disc{font-size:12px;color:#9a9a9a;margin-top:18px}
+</style>
 </head>
 <body>
 
-  <canvas id="football-canvas"></canvas>
+<header>CONTEÚDO INFORMATIVO • DESENVOLVIMENTO PESSOAL MASCULINO</header>
 
-  <!-- URGÊNCIA -->
-  <div class="urgencia-bar">
-    🔥 Ofertas Especiais Copa 2026 — Estoque limitado, garanta a sua TV agora!
+<div class="wrap hero">
+  <span class="tag">Comunicação &amp; Confiança</span>
+  <h1>Por que alguns homens <span>falam com qualquer pessoa sem travar</span> — e outros congelam na hora H?</h1>
+  <p class="sub">A diferença não é beleza, dinheiro ou "papo pronto". É uma habilidade que pode ser aprendida.</p>
+  <div class="autor">Por Equipe de Conteúdo • Leitura de 2 minutos</div>
+</div>
+
+<div class="wrap">
+  <p class="lead">Talvez você conheça a cena: aquela conversa importante aparece — com uma pessoa que te interessa, numa roda de amigos, numa reunião — e do nada a mente trava. As palavras somem. Depois, em casa, você imagina tudo o que <i>poderia</i> ter dito.</p>
+
+  <p>Se isso te soa familiar, respira: <b>não é um defeito seu, é falta de método.</b> A maioria dos homens nunca aprendeu, de forma estruturada, como conduzir uma conversa com naturalidade e transmitir segurança — mesmo sob pressão.</p>
+
+  <div class="destaque">
+    A boa notícia é que comunicação e presença <b>são habilidades treináveis</b>, exatamente como dirigir ou malhar. Quem parece "ter nascido com isso" geralmente só repete, sem saber, alguns padrões simples. E padrões podem ser ensinados.
   </div>
 
-  <!-- HEADER -->
-  <header>
-    <div class="logo-texto">DIA DE<span>COMPRA</span></div>
-  </header>
+  <h2>O que muda quando você destrava a comunicação</h2>
+  <ul class="check">
+    <li>Você expressa o que pensa <b>na hora certa</b>, sem ficar remoendo depois.</li>
+    <li>Transmite confiança de forma natural — sem parecer forçado ou arrogante.</li>
+    <li>Deixa de passar despercebido em rodas de conversa e no trabalho.</li>
+    <li>Conduz o diálogo com calma, mesmo em situações que antes te deixavam nervoso.</li>
+    <li>Constrói uma versão sua mais segura — e isso aparece em tudo.</li>
+  </ul>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="badge-copa">⚽ Ofertas Especiais Copa 2026</div>
-    <h1>
-      As <span class="destaque">Melhores TVs</span> para<br />
-      assistir a Copa em Casa
-    </h1>
-    <p class="sub">As melhores ofertas com desconto — direto no Mercado Livre, com entrega rápida para todo o Brasil</p>
+  <!-- ===================== QUIZ DE QUALIFICAÇÃO ===================== -->
+  <div class="quiz" id="quiz">
+    <div class="progress"><div class="bar" id="bar"></div></div>
 
-    <div class="countdown-wrap">
-      <div class="countdown-label">⏳ Copa começa em</div>
-      <div class="countdown">
-        <div class="bloco"><span class="num" id="cd-dias">--</span><span class="leg">Dias</span></div>
-        <div class="bloco"><span class="num" id="cd-horas">--</span><span class="leg">Horas</span></div>
-        <div class="bloco"><span class="num" id="cd-min">--</span><span class="leg">Min</span></div>
-        <div class="bloco"><span class="num" id="cd-seg">--</span><span class="leg">Seg</span></div>
-      </div>
+    <div class="step active" data-step="1">
+      <h3>Responda rápido: o que mais te trava hoje?</h3>
+      <p>3 perguntas. Vamos te mostrar o caminho certo.</p>
+      <button class="opt" onclick="next()">😶 Travo e não sei o que dizer</button>
+      <button class="opt" onclick="next()">🫥 Falo, mas passo despercebido</button>
+      <button class="opt" onclick="next()">😰 Fico nervoso e perco a confiança</button>
     </div>
-  </section>
 
-  <!-- GRADE DE TVS -->
-  <section class="tvs-section">
-    <h2 class="tvs-section-title">📺 <span>TVs em Oferta</span> para a Copa</h2>
-    <p class="tvs-section-sub">Clique na TV que mais gosta e garanta a sua com desconto</p>
-
-    <div class="tvs-grid" id="tvs-grid">
-
-      <!-- TV #1 — Samsung 50" 4K Crystal -->
-      <div class="tv-card">
-        <div class="tv-card-img-wrap">
-          <span class="tv-desconto-badge">🔥 32% OFF</span>
-          <span class="tv-marca-badge">Samsung</span>
-          <img src="https://http2.mlstatic.com/D_NQ_NP_2X_681127-MLB95141203574_102025-F.webp" alt="Samsung Smart TV 50 polegadas 4K Crystal" />
-        </div>
-        <div class="tv-card-body">
-          <div class="tv-card-nome">Samsung Smart TV 50" 4K Crystal Ultra HD — Tizen OS</div>
-          <ul class="tv-specs-mini">
-            <li><span>Tamanho</span><span class="sv">50 Polegadas</span></li>
-            <li><span>Resolução</span><span class="sv">4K Ultra HD</span></li>
-            <li><span>Sistema</span><span class="sv">Tizen OS</span></li>
-            <li><span>HDR</span><span class="sv">HDR10+</span></li>
-            <li><span>Entradas</span><span class="sv">3x HDMI • 2x USB</span></li>
-          </ul>
-        </div>
-        <div class="tv-preco-box">
-          <div class="tv-preco-de">De R$3.152</div>
-          <div class="tv-preco-por">R$2.127,60</div>
-          <div class="tv-preco-parcela">no Pix • ou <strong>10x de R$255,90</strong> sem juros</div>
-        </div>
-        <div class="tv-card-footer">
-          <a href="https://meli.la/1W4PiVu" class="tv-cta-btn" target="_blank" rel="noopener" onclick="fbq('track','InitiateCheckout',{content_name:'Samsung 50 4K'})">
-            🛒 Garantir com 32% OFF
-          </a>
-          <div class="tv-cta-sub">🔒 Compra segura • Frete Grátis • Entrega Full</div>
-        </div>
-      </div>
-
-      <!-- TV #2 — Britânia 43" HDR10 Dolby Roku -->
-      <div class="tv-card">
-        <div class="tv-card-img-wrap">
-          <span class="tv-desconto-badge">🔥 22% OFF</span>
-          <span class="tv-marca-badge" style="background:#c0392b;">Britânia</span>
-          <img src="https://http2.mlstatic.com/D_NQ_NP_2X_754547-MLA109977956443_042026-F.webp" alt="Smart TV 43 Britânia HDR10 Dolby Áudio Roku TV" />
-        </div>
-        <div class="tv-card-body">
-          <div class="tv-card-nome">Britânia Smart TV 43" HDR10 Dolby Áudio — Roku TV B43kra</div>
-          <ul class="tv-specs-mini">
-            <li><span>Tamanho</span><span class="sv">43 Polegadas</span></li>
-            <li><span>HDR</span><span class="sv">HDR10</span></li>
-            <li><span>Áudio</span><span class="sv">Dolby Áudio</span></li>
-            <li><span>Sistema</span><span class="sv">Roku TV</span></li>
-            <li><span>Entradas</span><span class="sv">3x HDMI • USB</span></li>
-          </ul>
-        </div>
-        <div class="tv-preco-box">
-          <div class="tv-preco-de">De R$1.599</div>
-          <div class="tv-preco-por">R$1.236,87</div>
-          <div class="tv-preco-parcela">ou <strong>10x de R$123,69</strong> sem juros</div>
-        </div>
-        <div class="tv-card-footer">
-          <a href="https://meli.la/33vTPRv" class="tv-cta-btn" target="_blank" rel="noopener" onclick="fbq('track','InitiateCheckout',{content_name:'Britannia 43 HDR10'})">
-            🛒 Garantir com 22% OFF
-          </a>
-          <div class="tv-cta-sub">🔒 Compra segura • Frete Grátis • Entrega Full</div>
-        </div>
-      </div>
-
-      <!-- TV #3 — Philco 50" 4K Roku HDR10 -->
-      <div class="tv-card">
-        <div class="tv-card-img-wrap">
-          <span class="tv-desconto-badge">🔥 37% OFF</span>
-          <span class="tv-marca-badge philips">Philco</span>
-          <img src="https://http2.mlstatic.com/D_Q_NP_753324-MLA108743670040_032026-F.webp" alt="Smart TV Philco 50 P50vik 4K UHD LED Roku Dolby Audio Wi-Fi HDR10" />
-        </div>
-        <div class="tv-card-body">
-          <div class="tv-card-nome">⭐ Mais Vendido — Philco Smart TV 50" 4K UHD LED Roku Dolby Audio HDR10</div>
-          <ul class="tv-specs-mini">
-            <li><span>Tamanho</span><span class="sv">50 Polegadas</span></li>
-            <li><span>Resolução</span><span class="sv">4K UHD</span></li>
-            <li><span>Sistema</span><span class="sv">Roku TV</span></li>
-            <li><span>HDR</span><span class="sv">HDR10</span></li>
-            <li><span>Áudio</span><span class="sv">Dolby Audio</span></li>
-          </ul>
-        </div>
-        <div class="tv-preco-box">
-          <div class="tv-preco-de">De R$3.499</div>
-          <div class="tv-preco-por">R$2.184,05</div>
-          <div class="tv-preco-parcela">no Pix • ou <strong>10x de R$229,90</strong> sem juros</div>
-        </div>
-        <div class="tv-card-footer">
-          <a href="https://meli.la/2NG8TgU" class="tv-cta-btn" target="_blank" rel="noopener" onclick="fbq('track','InitiateCheckout',{content_name:'Philco 50 4K Roku'})">
-            🛒 Garantir com 37% OFF
-          </a>
-          <div class="tv-cta-sub">🔒 Compra segura • Frete Grátis • Entrega Full</div>
-        </div>
-      </div>
-
-      <!-- TV #4 — A PREENCHER -->
-      <!-- TV #4 — Philco 58" 4K Roku HDR10 -->
-      <div class="tv-card">
-        <div class="tv-card-img-wrap">
-          <span class="tv-desconto-badge">🔥 37% OFF</span>
-          <span class="tv-marca-badge philips">Philco</span>
-          <img src="https://http2.mlstatic.com/D_Q_NP_668507-MLA108744768802_032026-F.webp" alt="Smart TV Philco 58 P58vik 4K UHD LED Roku Dolby Audio Wi-Fi HDR10" />
-        </div>
-        <div class="tv-card-body">
-          <div class="tv-card-nome">Philco Smart TV 58" 4K UHD LED Roku Dolby Audio HDR10 — P58vik</div>
-          <ul class="tv-specs-mini">
-            <li><span>Tamanho</span><span class="sv">58 Polegadas</span></li>
-            <li><span>Resolução</span><span class="sv">4K UHD</span></li>
-            <li><span>Sistema</span><span class="sv">Roku TV</span></li>
-            <li><span>HDR</span><span class="sv">HDR10</span></li>
-            <li><span>Áudio</span><span class="sv">Dolby Audio</span></li>
-          </ul>
-        </div>
-        <div class="tv-preco-box">
-          <div class="tv-preco-de">De R$3.999</div>
-          <div class="tv-preco-por">R$2.483,08</div>
-          <div class="tv-preco-parcela">no Pix • ou <strong>10x de R$269,90</strong> sem juros</div>
-        </div>
-        <div class="tv-card-footer">
-          <a href="https://meli.la/1gwBEHo" class="tv-cta-btn" target="_blank" rel="noopener" onclick="fbq('track','InitiateCheckout',{content_name:'Philco 58 4K Roku'})">
-            🛒 Garantir com 37% OFF
-          </a>
-          <div class="tv-cta-sub">🔒 Compra segura • Frete Grátis • Entrega Full</div>
-        </div>
-      </div>
-
-      <!-- TV #5 — Samsung 32" HD LED Wi-Fi -->
-      <div class="tv-card">
-        <div class="tv-card-img-wrap">
-          <span class="tv-desconto-badge">🔥 39% OFF</span>
-          <span class="tv-marca-badge">Samsung</span>
-          <img src="https://http2.mlstatic.com/D_Q_NP_899090-MLA107424021398_032026-F.webp" alt="Smart TV Samsung 32 HD LED Wi-Fi HDMI" />
-        </div>
-        <div class="tv-card-body">
-          <div class="tv-card-nome">Samsung Smart TV 32" HD LED Wi-Fi HDMI 110/220V</div>
-          <ul class="tv-specs-mini">
-            <li><span>Tamanho</span><span class="sv">32 Polegadas</span></li>
-            <li><span>Resolução</span><span class="sv">HD (720p)</span></li>
-            <li><span>Painel</span><span class="sv">LED</span></li>
-            <li><span>Wi-Fi</span><span class="sv">Integrado</span></li>
-            <li><span>Entradas</span><span class="sv">HDMI • USB</span></li>
-          </ul>
-        </div>
-        <div class="tv-preco-box">
-          <div class="tv-preco-de">De R$1.599</div>
-          <div class="tv-preco-por">R$968,05</div>
-          <div class="tv-preco-parcela">ou <strong>10x de R$101,90</strong> sem juros</div>
-        </div>
-        <div class="tv-card-footer">
-          <a href="https://meli.la/1Tnkm2G" class="tv-cta-btn" target="_blank" rel="noopener" onclick="fbq('track','InitiateCheckout',{content_name:'Samsung 32 HD LED'})">
-            🛒 Garantir com 39% OFF
-          </a>
-          <div class="tv-cta-sub">🔒 Compra segura • Frete Grátis • Samsung Oficial</div>
-        </div>
-      </div>
-
-      <!-- TV #6 — A PREENCHER -->
-      <!-- TV #6 — Philips 32" HD Wi-Fi -->
-      <div class="tv-card">
-        <div class="tv-card-img-wrap">
-          <span class="tv-desconto-badge">🔥 21% OFF</span>
-          <span class="tv-marca-badge philips">Philips</span>
-          <img src="https://http2.mlstatic.com/D_NQ_NP_2X_651519-MLA109193361170_042026-F.webp" alt="Smart TV Philips 32 HD 32PHG6910 Wi-Fi" />
-        </div>
-        <div class="tv-card-body">
-          <div class="tv-card-nome">Philips Smart TV 32" HD Wi-Fi — 32PHG6910/78</div>
-          <ul class="tv-specs-mini">
-            <li><span>Tamanho</span><span class="sv">32 Polegadas</span></li>
-            <li><span>Resolução</span><span class="sv">HD (720p)</span></li>
-            <li><span>Wi-Fi</span><span class="sv">Integrado</span></li>
-            <li><span>Marca</span><span class="sv">Philips</span></li>
-            <li><span>Voltagem</span><span class="sv">110/220V</span></li>
-          </ul>
-        </div>
-        <div class="tv-preco-box">
-          <div class="tv-preco-de">De R$1.399</div>
-          <div class="tv-preco-por">R$1.099</div>
-          <div class="tv-preco-parcela">ou <strong>10x de R$115,00</strong> sem juros</div>
-        </div>
-        <div class="tv-card-footer">
-          <a href="https://meli.la/2DwaBGH" class="tv-cta-btn" target="_blank" rel="noopener" onclick="fbq('track','InitiateCheckout',{content_name:'Philips 32 HD'})">
-            🛒 Garantir com 21% OFF
-          </a>
-          <div class="tv-cta-sub">🔒 Compra segura • Frete Grátis • Entrega Full</div>
-        </div>
-      </div>
-
-      <!-- TV #7 — LG 55" 4K UHD AI webOS 25 -->
-      <div class="tv-card">
-        <div class="tv-card-img-wrap">
-          <span class="tv-desconto-badge">🔥 47% OFF</span>
-          <span class="tv-marca-badge lg">LG</span>
-          <img src="https://http2.mlstatic.com/D_NQ_NP_2X_943303-MLA96642194723_102025-F.webp" alt="Smart TV LG 55 UHD AI UA75 HDR10 Pro webOS 25" />
-        </div>
-        <div class="tv-card-body">
-          <div class="tv-card-nome">🏆 LG Smart TV 55" 4K UHD HDR10 Pro — Processador α7 AI Gen8 webOS 25</div>
-          <ul class="tv-specs-mini">
-            <li><span>Tamanho</span><span class="sv">55 Polegadas</span></li>
-            <li><span>Resolução</span><span class="sv">4K UHD</span></li>
-            <li><span>HDR</span><span class="sv">HDR10 Pro</span></li>
-            <li><span>Sistema</span><span class="sv">webOS 25</span></li>
-            <li><span>Processador</span><span class="sv">α7 AI Gen8</span></li>
-          </ul>
-        </div>
-        <div class="tv-preco-box">
-          <div class="tv-preco-de">De R$4.499</div>
-          <div class="tv-preco-por">R$2.369</div>
-          <div class="tv-preco-parcela">no Pix • ou <strong>10x de R$263,22</strong> sem juros</div>
-        </div>
-        <div class="tv-card-footer">
-          <a href="https://meli.la/2u8dNHV" class="tv-cta-btn" target="_blank" rel="noopener" onclick="fbq('track','InitiateCheckout',{content_name:'LG 55 4K UHD AI'})">
-            🛒 Garantir com 47% OFF
-          </a>
-          <div class="tv-cta-sub">🔒 Compra segura • Frete Grátis • Entrega Full</div>
-        </div>
-      </div>
-
-      <!-- TV #8 — A PREENCHER -->
-      <!-- TV #8 — TCL 40" Full HD QLED Google TV -->
-      <div class="tv-card">
-        <div class="tv-card-img-wrap">
-          <span class="tv-desconto-badge">🔥 16% OFF</span>
-          <span class="tv-marca-badge tcl">TCL</span>
-          <img src="https://http2.mlstatic.com/D_NQ_NP_2X_921977-MLA101079247152_122025-F.webp" alt="Smart TV TCL 40 Full HD QLED S5K Google TV HDR10 Dolby Audio" />
-        </div>
-        <div class="tv-card-body">
-          <div class="tv-card-nome">TCL Smart TV 40" Full HD QLED Google TV — Bluetooth • HDR10 • Dolby Audio</div>
-          <ul class="tv-specs-mini">
-            <li><span>Tamanho</span><span class="sv">40 Polegadas</span></li>
-            <li><span>Resolução</span><span class="sv">Full HD</span></li>
-            <li><span>Painel</span><span class="sv">QLED</span></li>
-            <li><span>Sistema</span><span class="sv">Google TV</span></li>
-            <li><span>Conexão</span><span class="sv">Wi-Fi • Bluetooth</span></li>
-          </ul>
-        </div>
-        <div class="tv-preco-box">
-          <div class="tv-preco-de">De R$1.799</div>
-          <div class="tv-preco-por">R$1.495,74</div>
-          <div class="tv-preco-parcela">no Pix • ou <strong>10x de R$154,20</strong> sem juros</div>
-        </div>
-        <div class="tv-card-footer">
-          <a href="https://meli.la/19PAjEY" class="tv-cta-btn" target="_blank" rel="noopener" onclick="fbq('track','InitiateCheckout',{content_name:'TCL 40 QLED Google TV'})">
-            🛒 Garantir com 16% OFF
-          </a>
-          <div class="tv-cta-sub">🔒 Compra segura • Frete Grátis • Entrega Full</div>
-        </div>
-      </div>
-
-      <!-- TV #9 — LG 65" 4K UHD AI webOS 25 -->
-      <div class="tv-card">
-        <div class="tv-card-img-wrap">
-          <span class="tv-desconto-badge">🔥 35% OFF</span>
-          <span class="tv-marca-badge lg">LG</span>
-          <img src="https://http2.mlstatic.com/D_NQ_NP_2X_672478-MLA96642034771_102025-F.webp" alt="Smart TV LG 65 UHD AI UA75 HDR10 Pro webOS 25" />
-        </div>
-        <div class="tv-card-body">
-          <div class="tv-card-nome">LG Smart TV 65" 4K UHD HDR10 Pro — Processador α7 AI Gen8 webOS 25</div>
-          <ul class="tv-specs-mini">
-            <li><span>Tamanho</span><span class="sv">65 Polegadas</span></li>
-            <li><span>Resolução</span><span class="sv">4K UHD</span></li>
-            <li><span>HDR</span><span class="sv">HDR10 Pro</span></li>
-            <li><span>Sistema</span><span class="sv">webOS 25</span></li>
-            <li><span>Processador</span><span class="sv">α7 AI Gen8</span></li>
-          </ul>
-        </div>
-        <div class="tv-preco-box">
-          <div class="tv-preco-de">De R$4.999</div>
-          <div class="tv-preco-por">R$3.239,10</div>
-          <div class="tv-preco-parcela">no Pix • ou <strong>10x de R$359,90</strong> sem juros</div>
-        </div>
-        <div class="tv-card-footer">
-          <a href="https://meli.la/2XGan5C" class="tv-cta-btn" target="_blank" rel="noopener" onclick="fbq('track','InitiateCheckout',{content_name:'LG 65 4K UHD AI'})">
-            🛒 Garantir com 35% OFF
-          </a>
-          <div class="tv-cta-sub">🔒 Compra segura • Frete Grátis • Entrega Full</div>
-        </div>
-      </div>
-
-      <!-- TV #10 — LG 50" UA85 4K UHD AI webOS 25 -->
-      <div class="tv-card">
-        <div class="tv-card-img-wrap">
-          <span class="tv-desconto-badge">🔥 27% OFF</span>
-          <span class="tv-marca-badge lg">LG</span>
-          <img src="https://http2.mlstatic.com/D_NQ_NP_2X_639382-MLA96196677628_102025-F.webp" alt="Smart TV LG 50 UHD AI UA85 HDR10 Pro webOS 25" />
-        </div>
-        <div class="tv-card-body">
-          <div class="tv-card-nome">LG Smart TV 50" 4K UHD AI UA85 HDR10 Pro — Processador α7 AI Gen8 webOS 25</div>
-          <ul class="tv-specs-mini">
-            <li><span>Tamanho</span><span class="sv">50 Polegadas</span></li>
-            <li><span>Resolução</span><span class="sv">4K UHD</span></li>
-            <li><span>HDR</span><span class="sv">HDR10 Pro</span></li>
-            <li><span>Sistema</span><span class="sv">webOS 25</span></li>
-            <li><span>Processador</span><span class="sv">α7 AI Gen8</span></li>
-          </ul>
-        </div>
-        <div class="tv-preco-box">
-          <div class="tv-preco-de">De R$3.199</div>
-          <div class="tv-preco-por">R$2.315</div>
-          <div class="tv-preco-parcela">no Pix • ou <strong>10x de R$231,50</strong> sem juros</div>
-        </div>
-        <div class="tv-card-footer">
-          <a href="https://meli.la/2pCVABN" class="tv-cta-btn" target="_blank" rel="noopener" onclick="fbq('track','InitiateCheckout',{content_name:'LG 50 4K UHD AI UA85'})">
-            🛒 Ver oferta no Mercado Livre
-          </a>
-          <div class="tv-cta-sub">🔒 Compra segura • Frete Grátis • Entrega Full</div>
-        </div>
-      </div>
-
+    <div class="step" data-step="2">
+      <h3>Há quanto tempo isso te incomoda?</h3>
+      <p>Seja sincero — é só com você.</p>
+      <button class="opt" onclick="next()">Faz pouco tempo</button>
+      <button class="opt" onclick="next()">Já faz alguns anos</button>
+      <button class="opt" onclick="next()">A vida toda, sinceramente</button>
     </div>
-  </section>
 
-  <!-- CONFIANÇA -->
-  <section class="confianca">
-    <div class="confianca-title">🛡️ Compra 100% segura pelo Mercado Livre</div>
-    <div class="confianca-grid">
-      <div class="confianca-item">✅ Pagamento 100% seguro</div>
-      <div class="confianca-item">✅ Proteção ao comprador</div>
-      <div class="confianca-item">🚀 Entrega Full para todo o Brasil</div>
-      <div class="confianca-item">↩️ Devolução grátis em 30 dias</div>
-      <div class="confianca-item">⭐ Mercado Livre — site de confiança</div>
-      <div class="confianca-item">📺 Melhores marcas com desconto</div>
+    <div class="step" data-step="3">
+      <h3>Se existisse um método passo a passo pra resolver isso, você seguiria?</h3>
+      <p>Sem enrolação, direto ao ponto.</p>
+      <button class="opt" onclick="next()">Sim, quero aprender</button>
+      <button class="opt" onclick="next()">Com certeza, já passou da hora</button>
     </div>
-  </section>
 
-  <!-- PROVA SOCIAL -->
-  <section class="prova">
-    <h2>⭐ O que estão a dizer</h2>
-    <div class="depo">
-      <div class="estrelas">★★★★★</div>
-      <p>"Chegou em 2 dias! Imagem incrível, já instalei na sala para a Copa. Vale muito cada centavo."</p>
-      <div class="depo-autor">— Carlos M. • São Paulo, SP</div>
+    <div class="step" data-step="4">
+      <h3>✅ Resultado: o Código da Coragem é pra você</h3>
+      <p>Pelas suas respostas, o que falta não é "querer" — é o método certo. Veja no vídeo a seguir como funciona.</p>
+      <a class="cta" href="SEU_LINK_DE_AFILIADO">▶ QUERO VER COMO FUNCIONA</a>
+      <div class="mini">Você será levado à apresentação oficial do método.</div>
     </div>
-    <div class="depo">
-      <div class="estrelas">★★★★★</div>
-      <p>"Comprei para ver os jogos com a família. A qualidade da imagem é absurda, parece cinema em casa."</p>
-      <div class="depo-autor">— Fernanda R. • Rio de Janeiro, RJ</div>
-    </div>
-    <div class="depo">
-      <div class="estrelas">★★★★☆</div>
-      <p>"Ótima TV pelo preço. O Smart TV funciona muito bem, Netflix e YouTube perfeitos."</p>
-      <div class="depo-autor">— Rodrigo A. • Belo Horizonte, MG</div>
-    </div>
-  </section>
+  </div>
+  <!-- =============================================================== -->
 
-  <!-- FOOTER -->
-  <footer>
-    <p>Esta página contém links de afiliado. Ao comprar você ajuda a manter este site sem custo adicional para si.</p>
-    <p style="margin-top:6px;">© 2026 Dia de Compra · Todos os direitos reservados</p>
-  </footer>
+  <div class="prova">
+    <div class="num">7</div>
+    <div>Garantia incondicional de <b>7 dias</b>. Se achar que não é pra você, devolvem 100% do valor — risco zero pra testar.</div>
+  </div>
 
-  <script>
-    (function () {
-      const canvas = document.getElementById('football-canvas');
-      const ctx    = canvas.getContext('2d');
-      function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
-      resize();
-      window.addEventListener('resize', resize);
-      const EMOJIS = ['⚽', '⚽', '⚽', '⚽', '🏆', '⚽', '⚽'];
-      const balls  = Array.from({ length: 22 }, () => ({
-        x: Math.random() * window.innerWidth, y: Math.random() * window.innerHeight,
-        size: 20 + Math.random() * 36, speed: 0.3 + Math.random() * 0.7,
-        opacity: 0.12 + Math.random() * 0.22, rot: Math.random() * Math.PI * 2,
-        rotSpd: (Math.random() - 0.5) * 0.022, drift: (Math.random() - 0.5) * 0.5,
-        emoji: EMOJIS[Math.floor(Math.random() * EMOJIS.length)],
-      }));
-      function tick() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        for (const b of balls) {
-          b.y -= b.speed; b.x += b.drift; b.rot += b.rotSpd;
-          if (b.y < -b.size * 2) { b.y = canvas.height + b.size; b.x = Math.random() * canvas.width; }
-          if (b.x < -b.size * 2) b.x = canvas.width + b.size;
-          if (b.x > canvas.width + b.size * 2) b.x = -b.size;
-          ctx.save(); ctx.translate(b.x, b.y); ctx.rotate(b.rot);
-          ctx.globalAlpha = b.opacity; ctx.font = `${b.size}px serif`;
-          ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-          ctx.fillText(b.emoji, 0, 0); ctx.restore();
-        }
-        requestAnimationFrame(tick);
-      }
-      tick();
-    })();
-  </script>
+  <h2>Como dar o primeiro passo hoje</h2>
+  <p>O <b>Código da Coragem</b> reúne, num passo a passo direto, as técnicas de comunicação, presença e inteligência social que destravam a confiança — pensado para quem está começando do zero e quer resultado prático, não teoria.</p>
 
-  <script>
-    const CUP_DATE = new Date('2026-06-11T00:00:00');
-    function updateCountdown() {
-      const diff = CUP_DATE - new Date();
-      if (diff <= 0) {
-        document.querySelector('.countdown-wrap').innerHTML =
-          '<p style="color:var(--ouro);font-weight:700;font-size:1.1rem;">⚽ A Copa já começou!</p>';
-        return;
-      }
-      const dias  = Math.floor(diff / 86400000);
-      const horas = Math.floor((diff % 86400000) / 3600000);
-      const min   = Math.floor((diff % 3600000)  / 60000);
-      const seg   = Math.floor((diff % 60000)    / 1000);
-      document.getElementById('cd-dias').textContent  = String(dias).padStart(2,'0');
-      document.getElementById('cd-horas').textContent = String(horas).padStart(2,'0');
-      document.getElementById('cd-min').textContent   = String(min).padStart(2,'0');
-      document.getElementById('cd-seg').textContent   = String(seg).padStart(2,'0');
+  <a class="cta" href="SEU_LINK_DE_AFILIADO">CONHECER O CÓDIGO DA CORAGEM ▶</a>
+  <p style="text-align:center;font-size:14px;color:#888">À vista R$247 ou 12x de R$24,80 • Acesso imediato • Garantia de 7 dias</p>
+
+  <p class="disc">Este é um conteúdo informativo e de opinião sobre desenvolvimento pessoal. Os resultados variam de pessoa para pessoa e dependem de dedicação individual. Esta página não tem afiliação com a Meta/Facebook/Instagram. Ao clicar, você acessa a página oficial do produtor.</p>
+</div>
+
+<footer>
+  © O Código da Coragem — Conteúdo informativo.<br>
+  Página de divulgação independente • Termos e Privacidade disponíveis na página oficial.
+</footer>
+
+<script>
+  // Quiz simples de qualificação (sem coletar dados — só engajamento)
+  let s = 1;
+  function next(){
+    document.querySelector('.step[data-step="'+s+'"]').classList.remove('active');
+    s++;
+    const el = document.querySelector('.step[data-step="'+s+'"]');
+    if(el){
+      el.classList.add('active');
+      document.getElementById('bar').style.width = ((s-1)/3*100)+'%';
+      document.getElementById('quiz').scrollIntoView({behavior:'smooth',block:'center'});
     }
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-  </script>
+    // Lead aquecido: completou o quiz e viu a oferta
+    if(s===4 && window.fbq){
+      fbq('track','ViewContent',{content_name:'Quiz concluido'});
+    }
+  }
 
+  // ===== Evento ao clicar em QUALQUER botão que leva à VSL =====
+  // Este é o evento de conversão da PRESELL que vamos usar para otimizar
+  // a campanha no início (a Compra real acontece na Kiwify, fora do nosso pixel).
+  document.querySelectorAll('a.cta').forEach(function(a){
+    a.addEventListener('click', function(){
+      if(window.fbq){ fbq('track','Lead',{content_name:'Codigo da Coragem'}); }
+    });
+  });
+</script>
 </body>
 </html>
