@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Como criar vídeos profissionais com Inteligência Artificial (mesmo começando do zero)</title>
+<!-- ====================================================================
+     PRÉ-VENDA (advertorial) — Escola da IA (afiliado)
+     ÂNGULO LIMPO: aprender a criar vídeos/conteúdo com IA do zero.
+     Renda extra entra como CONSEQUÊNCIA suave ("muita gente monetiza"),
+     NUNCA como promessa ("ganhe R$5.000") -> evita reprovação Meta.
+     Design ORIGINAL (não clona o site oficial do produtor).
+     CTA -> link de afiliado da página de vendas (VSL oficial).
+==================================================================== -->
+<!-- ===================== PIXEL DA META ===================== -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '375721718910264');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=375721718910264&ev=PageView&noscript=1"/></noscript>
+<!-- =================== FIM PIXEL DA META =================== -->
+<style>
+  :root{
+    --bg:#0b1020; --bg2:#121a33; --card:#161f3d; --line:#26315a;
+    --txt:#e9edff; --mut:#9aa6cf; --azul:#3b82f6; --roxo:#8b5cf6; --neon:#22d3ee;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--txt);line-height:1.6;background:var(--bg);-webkit-font-smoothing:antialiased}
+  .wrap{max-width:680px;margin:0 auto;padding:0 20px}
+  header{background:#070b18;color:#aab6e6;padding:10px 0;text-align:center;font-size:13px;letter-spacing:.5px;border-bottom:1px solid var(--line)}
+  .hero{padding:30px 0 8px}
+  .tag{display:inline-block;background:linear-gradient(90deg,var(--azul),var(--roxo));color:#fff;font-size:12px;font-weight:700;padding:6px 13px;border-radius:30px;margin-bottom:16px;text-transform:uppercase;letter-spacing:.5px}
+  h1{font-size:30px;line-height:1.22;margin-bottom:14px;color:#fff}
+  h1 span{background:linear-gradient(90deg,var(--neon),var(--azul));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .sub{font-size:18px;color:var(--mut);margin-bottom:8px}
+  .autor{font-size:14px;color:#7e8ab8;margin:18px 0;border-left:3px solid var(--roxo);padding-left:12px}
+  .lead{font-size:18px;margin:18px 0}
+  p{margin:14px 0;font-size:17px}
+  .destaque{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:22px 0;font-size:17px}
+  .destaque b{color:var(--neon)}
+  h2{font-size:23px;color:#fff;margin:30px 0 6px}
+  ul.check{list-style:none;margin:18px 0}
+  ul.check li{padding:8px 0 8px 34px;position:relative;font-size:17px}
+  ul.check li:before{content:"\2728";position:absolute;left:0;top:7px}
+  .quiz{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 22px;margin:30px 0;text-align:center}
+  .quiz h3{font-size:21px;margin-bottom:6px;color:#fff}
+  .quiz p{color:var(--mut);font-size:15px;margin:6px 0 18px}
+  .opt{display:block;width:100%;background:#1c2747;color:#fff;border:1px solid var(--line);border-radius:10px;
+       padding:15px;margin:9px 0;font-size:16px;cursor:pointer;transition:.15s;text-align:left}
+  .opt:hover{background:#243363;border-color:var(--azul)}
+  .step{display:none}
+  .step.active{display:block;animation:fade .3s}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1}}
+  .progress{height:6px;background:#1c2747;border-radius:6px;margin-bottom:18px;overflow:hidden}
+  .bar{height:100%;width:0;background:linear-gradient(90deg,var(--neon),var(--roxo));transition:width .4s}
+  .cta{display:block;background:linear-gradient(90deg,var(--azul),var(--roxo));color:#fff;font-weight:800;font-size:19px;text-align:center;
+       text-decoration:none;padding:18px 20px;border-radius:12px;margin:14px 0;box-shadow:0 8px 24px rgba(59,130,246,.4)}
+  .cta:active{transform:translateY(1px)}
+  .mini{font-size:13px;color:var(--mut);margin-top:8px}
+  .bonus{background:var(--card);border:2px dashed var(--roxo);border-radius:14px;padding:20px;margin:24px 0}
+  .bonus h3{color:var(--neon);text-align:center;margin-bottom:10px}
+  .bonus li{padding:6px 0 6px 28px;position:relative;list-style:none}
+  .bonus li:before{content:"\1F381";position:absolute;left:0}
+  .prova{display:flex;gap:14px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin:16px 0}
+  .prova .num{font-size:30px;font-weight:800;color:var(--neon);line-height:1}
+  .preco{text-align:center;font-size:15px;color:var(--mut);margin:6px 0 2px}
+  .preco s{color:#5f6b95}
+  .preco b{color:#fff;font-size:26px}
+  footer{background:#070b18;color:#7e8ab8;font-size:12px;text-align:center;padding:26px 20px;margin-top:40px;line-height:1.7;border-top:1px solid var(--line)}
+  .disc{font-size:12px;color:#6b769e;margin-top:18px}
+</style>
+</head>
+<body>
+
+<header>🤖 CONTEÚDO INFORMATIVO • TECNOLOGIA &amp; INTELIGÊNCIA ARTIFICIAL</header>
+
+<div class="wrap hero">
+  <span class="tag">IA na prática</span>
+  <h1>Como criar <span>vídeos profissionais com Inteligência Artificial</span> — mesmo começando do zero</h1>
+  <p class="sub">Vídeos que prendem a atenção, criados no computador ou no celular, sem aparecer e sem equipamento caro.</p>
+  <div class="autor">Por Equipe de Conteúdo • Leitura de 2 minutos</div>
+</div>
+
+<div class="wrap">
+  <p class="lead">Você já reparou na quantidade de vídeos impressionantes que aparecem hoje no Instagram, TikTok e YouTube — e que foram feitos inteiramente com Inteligência Artificial? 🤖</p>
+
+  <p>A verdade é que a diferença entre quem assiste e quem <b>cria</b> esses vídeos não é talento, nem aparecer na câmara. É saber <b>quais ferramentas usar</b> e o <b>passo a passo certo</b> — algo que dá para aprender começando do absoluto zero.</p>
+
+  <div class="destaque">
+    Não é à toa que tanta gente tem usado a IA para <b>criar conteúdo, crescer nas redes e até transformar isso numa fonte de renda</b>. Quando o vídeo é bom, ele se espalha sozinho.
+  </div>
+
+  <h2>O que dá para aprender a fazer com IA</h2>
+  <ul class="check">
+    <li>Criar <b>vídeos cinematográficos</b> com fala sincronizada e expressões realistas.</li>
+    <li>Gerar <b>imagens e vídeos ilimitados</b> com IAs — passo a passo, do zero.</li>
+    <li>Criar um <b>avatar falante</b> (clone digital) que grava vídeos por você, sem aparecer.</li>
+    <li>Clonar voz com qualidade profissional e criar personagens consistentes.</li>
+    <li>Viralizar no <b>Reels, TikTok e YouTube Shorts</b> e monetizar canais.</li>
+  </ul>
+
+  <!-- ===================== QUIZ DE QUALIFICAÇÃO ===================== -->
+  <div class="quiz" id="quiz">
+    <div class="progress"><div class="bar" id="bar"></div></div>
+
+    <div class="step active" data-step="1">
+      <h3>Responda rápido: o que mais combina com você?</h3>
+      <p>3 perguntas e mostramos o caminho.</p>
+      <button class="opt" onclick="next()">🎬 Quero criar vídeos incríveis com IA</button>
+      <button class="opt" onclick="next()">📈 Quero crescer e monetizar nas redes</button>
+      <button class="opt" onclick="next()">🤖 Quero entender a IA do zero, na prática</button>
+    </div>
+
+    <div class="step" data-step="2">
+      <h3>Qual é o seu nível hoje?</h3>
+      <p>Sem julgamento — todo mundo começa em algum ponto.</p>
+      <button class="opt" onclick="next()">Nunca mexi com IA, mas tenho vontade</button>
+      <button class="opt" onclick="next()">Já testei algumas ferramentas</button>
+      <button class="opt" onclick="next()">Já crio conteúdo e quero acelerar</button>
+    </div>
+
+    <div class="step" data-step="3">
+      <h3>Se tivesse o passo a passo completo + as ferramentas certas, usaria?</h3>
+      <p>Direto ao ponto.</p>
+      <button class="opt" onclick="next()">Com certeza, quero aprender</button>
+      <button class="opt" onclick="next()">Sim, já passou da hora!</button>
+    </div>
+
+    <div class="step" data-step="4">
+      <h3>✅ Resultado: o treinamento é pra você</h3>
+      <p>Pelo que respondeu, o que falta não é talento — é ter o passo a passo certo e as ferramentas na mão. Veja tudo na página a seguir.</p>
+      <a class="cta" href="https://kiwify.app/zxsuao9?afid=yHntJenv">🤖 QUERO APRENDER IA DO ZERO</a>
+      <div class="mini">Você vai para a página oficial com todos os detalhes.</div>
+    </div>
+  </div>
+  <!-- =============================================================== -->
+
+  <div class="bonus">
+    <h3>O treinamento ainda inclui</h3>
+    <ul>
+      <li>Mais de 90 aulas, do básico ao avançado</li>
+      <li>Prompts prontos e roteiros automáticos (muita velocidade)</li>
+      <li>Suporte e comunidade no WhatsApp + atualizações semanais</li>
+    </ul>
+  </div>
+
+  <div class="prova">
+    <div class="num">7</div>
+    <div>Garantia de <b>7 dias</b>. Se achar que não é pra você, é só pedir o reembolso — 100% do valor de volta. Risco zero pra experimentar.</div>
+  </div>
+
+  <h2>Comece hoje, mesmo do zero</h2>
+  <p>É um treinamento completo de <b>criação de vídeos e conteúdo com Inteligência Artificial</b>, no passo a passo — pensado para quem está começando e quer resultado de verdade, sem complicação e sem precisar aparecer.</p>
+
+  <a class="cta" href="https://kiwify.app/zxsuao9?afid=yHntJenv">QUERO DOMINAR A IA 🤖</a>
+  <div class="preco">Acesso ao curso completo (+90 aulas) • <b>R$ 197,00</b> • acesso imediato • garantia de 7 dias</div>
+
+  <p class="disc">Conteúdo informativo sobre tecnologia e Inteligência Artificial. Resultados (inclusive de renda) variam conforme dedicação e prática de cada pessoa, não são garantidos. Página de divulgação independente, sem afiliação com a Meta/Facebook/Instagram. Ao clicar, você acessa a página oficial do produtor.</p>
+</div>
+
+<footer>
+  © Escola da IA — Conteúdo informativo.<br>
+  Página de divulgação independente • Termos e Privacidade na página oficial.
+</footer>
+
+<script>
+  let s = 1;
+  function next(){
+    document.querySelector('.step[data-step="'+s+'"]').classList.remove('active');
+    s++;
+    const el = document.querySelector('.step[data-step="'+s+'"]');
+    if(el){
+      el.classList.add('active');
+      document.getElementById('bar').style.width = ((s-1)/3*100)+'%';
+      document.getElementById('quiz').scrollIntoView({behavior:'smooth',block:'center'});
+    }
+    if(s===4 && window.fbq){ fbq('track','ViewContent',{content_name:'Quiz concluido - IA'}); }
+  }
+  document.querySelectorAll('a.cta').forEach(function(a){
+    a.addEventListener('click', function(){
+      if(window.fbq){ fbq('track','Lead',{content_name:'Escola da IA'}); }
+    });
+  });
+</script>
+</body>
+</html>
