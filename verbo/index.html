@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Verbo Sagrado — Sua Bíblia no celular | Baixe grátis</title>
-<meta name="description" content="Leia a Bíblia, ouça versículos em áudio e receba o Versículo do Dia. Baixe grátis o app Verbo Sagrado na Play Store.">
+<meta name="description" content="Leia a Bíblia, ouça versículos em áudio e receba o Versículo do Dia. Baixe grátis o app Verbo Sagrado no Android e iPhone.">
 <link rel="icon" href="https://play-lh.googleusercontent.com/7a8hwsexwhMTF9-OPfgl7yyNrNVk_QSdNhnbvosD1OkZXZy3ZFTr0MrWdP2HFl8klVzGY-d_wAeSbbZNENnk3g=s96">
 <!-- ===================== PIXEL DA META ===================== -->
 <script>
@@ -40,12 +40,15 @@
   .sub{font-size:18px;color:var(--mut);max-width:460px;margin:0 auto 6px}
   .stars{color:var(--ouro);font-size:16px;letter-spacing:2px;margin:14px 0 4px}
   .free{font-size:13px;color:var(--mut)}
-  .cta{display:flex;flex-direction:column;align-items:center;gap:10px;margin:26px 0 8px}
-  .btn{display:inline-flex;align-items:center;gap:12px;background:linear-gradient(90deg,var(--ouro),var(--ouro2));
-       color:#1a1300;font-weight:800;font-size:19px;padding:17px 30px;border-radius:14px;text-decoration:none;
+  .cta{display:flex;flex-direction:column;align-items:center;gap:12px;margin:26px 0 8px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;width:100%;max-width:340px;
+       background:linear-gradient(90deg,var(--ouro),var(--ouro2));
+       color:#1a1300;font-weight:800;font-size:18px;padding:16px 26px;border-radius:14px;text-decoration:none;
        box-shadow:0 10px 30px rgba(212,175,55,.35);transition:.15s}
   .btn:hover{transform:translateY(-2px);box-shadow:0 14px 38px rgba(212,175,55,.5)}
-  .btn svg{width:24px;height:24px}
+  .btn.alt{background:transparent;color:var(--txt);border:1.5px solid var(--line);box-shadow:none;font-size:16px;padding:13px 22px}
+  .btn.alt:hover{border-color:var(--ouro);transform:none;box-shadow:none}
+  .btn svg{width:22px;height:22px;flex:0 0 auto}
   .micro{font-size:13px;color:var(--mut)}
   section{padding:18px 0}
   h2{font-size:22px;color:#fff;text-align:center;margin:24px 0 14px}
@@ -59,6 +62,7 @@
   footer{border-top:1px solid var(--line);padding:24px 0 40px;text-align:center;color:#7e88b4;font-size:13px}
   .sticky{position:sticky;bottom:0;background:rgba(13,19,38,.92);backdrop-filter:blur(8px);
        border-top:1px solid var(--line);padding:12px 0;text-align:center}
+  .sticky .btn{display:inline-flex;width:auto;font-size:17px;padding:14px 26px}
 </style>
 </head>
 <body>
@@ -70,14 +74,20 @@
     <h1>Sua <span>Bíblia no celular</span>, todos os dias</h1>
     <p class="sub">Leia a Palavra, ouça versículos em áudio e receba o Versículo do Dia. Fortaleça sua fé onde estiver.</p>
     <div class="stars">★★★★★</div>
-    <div class="free">App gratuito • Android</div>
+    <div class="free">App gratuito • Android e iPhone</div>
 
     <div class="cta">
-      <a class="btn" id="cta1" href="https://play.google.com/store/apps/details?id=com.verbosagrado.app" rel="noopener">
+      <!-- Botão Play Store (Android) -->
+      <a class="btn store-android" data-go href="https://play.google.com/store/apps/details?id=com.verbosagrado.app" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.6 2.3 13 11.7l-2.3 2.3L3 4.9c-.3-.4-.4-1-.4-1.6 0-.4.2-.7.4-1zm10.9 10.9L17 15.7l-3.4 2-2-2 2.9-2.5zM4.6 21.7 13 13.3l2 2-8.5 5c-.3.2-.7.3-1 .3-.4 0-.7-.3-.9-.9zM18.4 9.4l2.7 1.6c.6.4 1 1 1 1.7s-.4 1.4-1 1.7l-2.6 1.5-3-2.5 2.9-4z"/></svg>
         Baixar na Play Store
       </a>
-      <span class="micro">Você será levado à página oficial do app no Google Play.</span>
+      <!-- Botão App Store (iPhone) -->
+      <a class="btn alt store-ios" data-go href="https://apps.apple.com/br/app/verbo-sagrado/id6772659120" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 12.04c-.03-2.4 1.96-3.55 2.05-3.61-1.12-1.64-2.86-1.86-3.48-1.89-1.48-.15-2.89.87-3.64.87-.75 0-1.91-.85-3.14-.83-1.62.02-3.11.94-3.94 2.39-1.68 2.91-.43 7.22 1.2 9.58.8 1.16 1.75 2.46 3 2.41 1.21-.05 1.67-.78 3.13-.78 1.46 0 1.87.78 3.14.76 1.3-.02 2.12-1.18 2.91-2.34.92-1.34 1.3-2.64 1.32-2.71-.03-.01-2.53-.97-2.56-3.84zM14.63 5.16c.66-.8 1.11-1.91.99-3.02-.95.04-2.11.63-2.79 1.43-.61.71-1.15 1.85-1 2.93 1.06.08 2.14-.54 2.8-1.34z"/></svg>
+        Baixar na App Store
+      </a>
+      <span class="micro">Disponível para Android e iPhone — escolha sua loja.</span>
     </div>
   </div>
 
@@ -95,17 +105,42 @@
 </div>
 
 <div class="sticky">
-  <a class="btn" id="cta2" href="https://play.google.com/store/apps/details?id=com.verbosagrado.app" rel="noopener" style="font-size:17px;padding:14px 26px">
+  <a class="btn" id="ctaSticky" data-go href="https://play.google.com/store/apps/details?id=com.verbosagrado.app" rel="noopener">
     📲 Baixar grátis agora
   </a>
 </div>
 
-<footer><div class="wrap">Verbo Sagrado — A Palavra que transforma.<br>Este site direciona ao app oficial no Google Play.</div></footer>
+<footer><div class="wrap">Verbo Sagrado — A Palavra que transforma.<br>Disponível no Google Play e na App Store.</div></footer>
 
 <script>
-  function go(){ if(window.fbq){ fbq('track','Lead'); } }
-  document.getElementById('cta1').addEventListener('click', go);
-  document.getElementById('cta2').addEventListener('click', go);
+  var PLAY  = 'https://play.google.com/store/apps/details?id=com.verbosagrado.app';
+  var APPLE = 'https://apps.apple.com/br/app/verbo-sagrado/id6772659120';
+  var ua = navigator.userAgent || navigator.vendor || '';
+  var isIOS = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  var isAndroid = /Android/.test(ua);
+
+  var android = document.querySelector('.store-android');
+  var ios = document.querySelector('.store-ios');
+  var sticky = document.getElementById('ctaSticky');
+
+  // Destaca a loja do aparelho do visitante e ajusta a ordem/estilo
+  if (isIOS) {
+    ios.classList.remove('alt');
+    android.classList.add('alt');
+    ios.parentNode.insertBefore(ios, android); // App Store primeiro
+    sticky.setAttribute('href', APPLE);
+    sticky.textContent = '📲 Baixar grátis na App Store';
+  } else if (isAndroid) {
+    sticky.setAttribute('href', PLAY);
+    sticky.textContent = '📲 Baixar grátis na Play Store';
+  } else {
+    // Computador: mantém Play como principal; ambos visíveis
+    sticky.setAttribute('href', PLAY);
+  }
+
+  // Pixel: registra Lead em qualquer clique de download
+  function go(){ if (window.fbq) { fbq('track','Lead'); } }
+  document.querySelectorAll('[data-go]').forEach(function(a){ a.addEventListener('click', go); });
 </script>
 </body>
 </html>
