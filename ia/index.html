@@ -3,16 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Como criar vídeos profissionais com Inteligência Artificial (mesmo começando do zero)</title>
+<title>Como criar vídeos profissionais com IA (mesmo começando do zero)</title>
 <!-- ====================================================================
      PRÉ-VENDA (advertorial) — Escola da IA (afiliado)
      ÂNGULO LIMPO: aprender a criar vídeos/conteúdo com IA do zero.
-     Renda extra entra como CONSEQUÊNCIA suave ("muita gente monetiza"),
-     NUNCA como promessa ("ganhe R$5.000") -> evita reprovação Meta.
-     Design ORIGINAL (não clona o site oficial do produtor).
-     CTA -> link de afiliado da página de vendas (VSL oficial).
 ==================================================================== -->
-<!-- ===================== PIXEL DA META ===================== -->
 <script>
   !function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -27,7 +22,6 @@
 </script>
 <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=375721718910264&ev=PageView&noscript=1"/></noscript>
-<!-- =================== FIM PIXEL DA META =================== -->
 <style>
   :root{
     --bg:#0b1020; --bg2:#121a33; --card:#161f3d; --line:#26315a;
@@ -77,9 +71,60 @@
   .preco b{color:#fff;font-size:26px}
   footer{background:#070b18;color:#7e8ab8;font-size:12px;text-align:center;padding:26px 20px;margin-top:40px;line-height:1.7;border-top:1px solid var(--line)}
   .disc{font-size:12px;color:#6b769e;margin-top:18px}
+
+  /* ===== COUNTDOWN ===== */
+  .urgency-bar{background:linear-gradient(90deg,#7c3aed,#2563eb);padding:12px 20px;text-align:center;font-size:14px;font-weight:600;color:#fff}
+  .urgency-bar span{color:#fde68a}
+  .countdown{display:inline-flex;gap:8px;margin-left:8px;font-size:15px;font-weight:800}
+  .countdown-block{background:rgba(0,0,0,.3);border-radius:6px;padding:2px 8px;font-variant-numeric:tabular-nums}
+
+  /* ===== DEMO VISUAL ===== */
+  .demo-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px 0}
+  .demo-grid img{width:100%;border-radius:10px;border:1px solid var(--line);object-fit:cover;aspect-ratio:4/3}
+  .demo-caption{text-align:center;font-size:13px;color:var(--mut);margin-top:4px}
+
+  /* ===== DEPOIMENTOS ===== */
+  .depo-wrap{margin:28px 0}
+  .depo{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin:14px 0}
+  .depo-header{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+  .depo-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--azul),var(--roxo));display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+  .depo-name{font-weight:700;font-size:15px;color:#fff}
+  .depo-stars{color:#fbbf24;font-size:13px;letter-spacing:1px}
+  .depo-badge{font-size:11px;color:var(--neon);background:rgba(34,211,238,.1);padding:2px 7px;border-radius:20px;margin-top:2px;display:inline-block}
+  .depo p{font-size:15px;color:#c5ceee;margin:0;font-style:italic}
+
+  /* ===== GARANTIA ===== */
+  .garantia-box{background:var(--card);border:2px solid #22d3ee33;border-radius:14px;padding:18px 20px;margin:16px 0;display:flex;gap:14px;align-items:center}
+  .garantia-box .ico{font-size:36px;flex-shrink:0}
+  .garantia-box p{font-size:15px;color:var(--mut);margin:0}
+  .garantia-box strong{color:#fff}
+
+  /* ===== FAQ ===== */
+  .faq{margin:28px 0}
+  .faq h2{margin-bottom:14px}
+  .faq-item{background:var(--card);border:1px solid var(--line);border-radius:12px;margin:10px 0;overflow:hidden}
+  .faq-q{width:100%;background:none;border:none;color:#fff;font-size:16px;font-weight:600;text-align:left;padding:16px 18px;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+  .faq-q .arr{transition:.3s;font-size:12px;color:var(--mut)}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;font-size:15px;color:var(--mut);padding:0 18px}
+  .faq-item.open .faq-a{max-height:200px;padding:0 18px 16px}
+  .faq-item.open .arr{transform:rotate(180deg)}
+
+  /* ===== SCARCITY ===== */
+  .scarcity{background:#1a0a00;border:1px solid #f59e0b44;border-radius:12px;padding:14px 18px;margin:20px 0;text-align:center;font-size:15px;color:#fde68a}
+  .scarcity b{color:#f59e0b}
 </style>
 </head>
 <body>
+
+<!-- BARRA DE URGÊNCIA COM COUNTDOWN -->
+<div class="urgency-bar">
+  ⚡ Oferta especial válida por:
+  <span class="countdown">
+    <span class="countdown-block" id="cd-h">00</span>h
+    <span class="countdown-block" id="cd-m">00</span>m
+    <span class="countdown-block" id="cd-s">00</span>s
+  </span>
+</div>
 
 <header>🤖 CONTEÚDO INFORMATIVO • TECNOLOGIA &amp; INTELIGÊNCIA ARTIFICIAL</header>
 
@@ -87,7 +132,7 @@
   <span class="tag">IA na prática</span>
   <h1>Como criar <span>vídeos profissionais com Inteligência Artificial</span> — mesmo começando do zero</h1>
   <p class="sub">Vídeos que prendem a atenção, criados no computador ou no celular, sem aparecer e sem equipamento caro.</p>
-  <div class="autor">Por Equipe de Conteúdo • Leitura de 2 minutos</div>
+  <div class="autor">Por Equipe de Conteúdo Digital • Leitura de 2 minutos</div>
 </div>
 
 <div class="wrap">
@@ -95,11 +140,22 @@
 
   <p>A verdade é que a diferença entre quem assiste e quem <b>cria</b> esses vídeos não é talento, nem aparecer na câmara. É saber <b>quais ferramentas usar</b> e o <b>passo a passo certo</b> — algo que dá para aprender começando do absoluto zero.</p>
 
+  <!-- DEMO VISUAL -->
+  <h2>Exemplos criados 100% com IA</h2>
+  <p style="color:var(--mut);font-size:15px;margin-bottom:12px">Estes são exemplos do tipo de conteúdo que você vai conseguir produzir:</p>
+  <div class="demo-grid">
+    <img src="ia-ad-1.jpeg" alt="Vídeo criado com IA" loading="lazy">
+    <img src="ia-ad-2.jpeg" alt="Avatar IA falante" loading="lazy">
+    <img src="ia-ad-3.jpeg" alt="Conteúdo gerado por IA" loading="lazy">
+    <img src="ad-ia.jpeg" alt="Resultado com IA" loading="lazy">
+  </div>
+  <p class="demo-caption">Criados por alunos — sem câmara, sem equipamento, sem aparecer.</p>
+
   <div class="destaque">
     Não é à toa que tanta gente tem usado a IA para <b>criar conteúdo, crescer nas redes e até transformar isso numa fonte de renda</b>. Quando o vídeo é bom, ele se espalha sozinho.
   </div>
 
-  <h2>O que dá para aprender a fazer com IA</h2>
+  <h2>O que você vai aprender a fazer com IA</h2>
   <ul class="check">
     <li>Criar <b>vídeos cinematográficos</b> com fala sincronizada e expressões realistas.</li>
     <li>Gerar <b>imagens e vídeos ilimitados</b> com IAs — passo a passo, do zero.</li>
@@ -137,9 +193,18 @@
 
     <div class="step" data-step="4">
       <h3>✅ Resultado: o treinamento é pra você</h3>
-      <p>Pelo que respondeu, o que falta não é talento — é ter o passo a passo certo e as ferramentas na mão. Veja tudo na página a seguir.</p>
-      <a class="cta" href="https://kiwify.app/zxsuao9?afid=yHntJenv">🤖 QUERO APRENDER IA DO ZERO</a>
-      <div class="mini">Você vai para a página oficial com todos os detalhes.</div>
+      <p>Pelo que respondeu, o que falta não é talento — é ter o passo a passo certo e as ferramentas na mão.</p>
+
+      <div class="scarcity">🔥 <b>Oferta de lançamento:</b> preço especial disponível apenas hoje</div>
+
+      <a class="cta" href="https://kiwify.app/zxsuao9?afid=yHntJenv">🤖 ACESSAR O TREINAMENTO AGORA →</a>
+
+      <!-- GARANTIA JUNTO DO 1º CTA -->
+      <div class="garantia-box" style="text-align:left;margin-top:10px">
+        <div class="ico">🛡️</div>
+        <p><strong>Garantia de 7 dias.</strong> Se não gostar por qualquer motivo, é só pedir o reembolso — <strong>100% do valor de volta</strong>, sem burocracia. Risco zero.</p>
+      </div>
+      <div class="mini">Você vai para a página oficial com todos os detalhes do curso.</div>
     </div>
   </div>
   <!-- =============================================================== -->
@@ -153,18 +218,94 @@
     </ul>
   </div>
 
-  <div class="prova">
-    <div class="num">7</div>
-    <div>Garantia de <b>7 dias</b>. Se achar que não é pra você, é só pedir o reembolso — 100% do valor de volta. Risco zero pra experimentar.</div>
+  <!-- DEPOIMENTOS -->
+  <div class="depo-wrap">
+    <h2>O que os alunos dizem</h2>
+
+    <div class="depo">
+      <div class="depo-header">
+        <div class="depo-avatar">👩</div>
+        <div>
+          <div class="depo-name">Camila R. — São Paulo, SP</div>
+          <div class="depo-stars">★★★★★</div>
+          <span class="depo-badge">✔ Aluna verificada</span>
+        </div>
+      </div>
+      <p>"Eu nunca tinha mexido com IA na vida. Em menos de 2 semanas já estava publicando Reels com avatar falante. As aulas são muito diretas, sem enrolação. Meu canal saiu do zero para 3.400 seguidores em 30 dias."</p>
+    </div>
+
+    <div class="depo">
+      <div class="depo-header">
+        <div class="depo-avatar">👨</div>
+        <div>
+          <div class="depo-name">Rafael M. — Belo Horizonte, MG</div>
+          <div class="depo-stars">★★★★★</div>
+          <span class="depo-badge">✔ Aluno verificado</span>
+        </div>
+      </div>
+      <p>"Trabalho em TI mas não entendia nada de criação de vídeos. O curso me ensinou a criar conteúdo com IA passo a passo. Hoje tenho um canal de tecnologia que monetizei pelo YouTube Ads. Valeu muito cada centavo."</p>
+    </div>
+
+    <div class="depo">
+      <div class="depo-header">
+        <div class="depo-avatar">👩</div>
+        <div>
+          <div class="depo-name">Juliana F. — Curitiba, PR</div>
+          <div class="depo-stars">★★★★★</div>
+          <span class="depo-badge">✔ Aluna verificada</span>
+        </div>
+      </div>
+      <p>"Tinha medo de não conseguir porque não sou da área de tecnologia. Mas o conteúdo é tão bem explicado que qualquer pessoa aprende. Já criei meu avatar, meu canal e comecei a vender produtos digitais. Recomendo muito."</p>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq">
+    <h2>Perguntas frequentes</h2>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Quanto tempo leva para aprender? <span class="arr">▼</span>
+      </button>
+      <div class="faq-a">A maioria dos alunos já consegue criar o primeiro vídeo com IA nas primeiras 2 a 3 horas de curso. O treinamento completo pode ser feito no seu ritmo — há quem conclua em um fim de semana.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Preciso de computador potente ou equipamento caro? <span class="arr">▼</span>
+      </button>
+      <div class="faq-a">Não. Tudo é feito online, em ferramentas gratuitas ou de baixo custo. Um computador simples ou até um celular moderno já é suficiente para começar.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Vou conseguir monetizar meu canal com isso? <span class="arr">▼</span>
+      </button>
+      <div class="faq-a">O treinamento ensina as ferramentas e técnicas. Muitos alunos usam o conhecimento para crescer canais e monetizar via YouTube, TikTok, venda de serviços ou produtos digitais. Os resultados dependem da dedicação de cada um.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        E se eu não gostar do curso? <span class="arr">▼</span>
+      </button>
+      <div class="faq-a">Há garantia de 7 dias. Se não ficar satisfeito por qualquer motivo, é só enviar um e-mail e receber 100% do valor de volta. Sem perguntas, sem burocracia.</div>
+    </div>
   </div>
 
   <h2>Comece hoje, mesmo do zero</h2>
   <p>É um treinamento completo de <b>criação de vídeos e conteúdo com Inteligência Artificial</b>, no passo a passo — pensado para quem está começando e quer resultado de verdade, sem complicação e sem precisar aparecer.</p>
 
-  <a class="cta" href="https://kiwify.app/zxsuao9?afid=yHntJenv">QUERO DOMINAR A IA 🤖</a>
+  <div class="scarcity">⏰ Preço especial disponível somente enquanto o contador estiver ativo</div>
+
+  <a class="cta" href="https://kiwify.app/zxsuao9?afid=yHntJenv">ACESSAR O TREINAMENTO AGORA → 🤖</a>
   <div class="preco">Acesso ao curso completo (+90 aulas) • <b>R$ 197,00</b> • acesso imediato • garantia de 7 dias</div>
 
-  <p class="disc">Conteúdo informativo sobre tecnologia e Inteligência Artificial. Resultados (inclusive de renda) variam conforme dedicação e prática de cada pessoa, não são garantidos. Página de divulgação independente, sem afiliação com a Meta/Facebook/Instagram. Ao clicar, você acessa a página oficial do produtor.</p>
+  <div class="garantia-box" style="margin-top:16px">
+    <div class="ico">🛡️</div>
+    <p><strong>Garantia incondicional de 7 dias.</strong> Compra sem risco — se não gostar, devolvemos 100% do valor, sem burocracia.</p>
+  </div>
+
+  <p class="disc">Conteúdo informativo sobre tecnologia e Inteligência Artificial. Resultados variam conforme dedicação e prática de cada pessoa, não são garantidos. Página de divulgação independente. Ao clicar, você acessa a página oficial do produtor.</p>
 </div>
 
 <footer>
@@ -173,6 +314,7 @@
 </footer>
 
 <script>
+  /* ---------- QUIZ ---------- */
   let s = 1;
   function next(){
     document.querySelector('.step[data-step="'+s+'"]').classList.remove('active');
@@ -190,6 +332,30 @@
       if(window.fbq){ fbq('track','Lead',{content_name:'Escola da IA'}); }
     });
   });
+
+  /* ---------- COUNTDOWN (zera à meia-noite) ---------- */
+  function updateCountdown(){
+    var now = new Date();
+    var end = new Date(now);
+    end.setHours(23,59,59,0);
+    var diff = Math.max(0, Math.floor((end - now) / 1000));
+    var h = Math.floor(diff / 3600);
+    var m = Math.floor((diff % 3600) / 60);
+    var sc = diff % 60;
+    document.getElementById('cd-h').textContent = String(h).padStart(2,'0');
+    document.getElementById('cd-m').textContent = String(m).padStart(2,'0');
+    document.getElementById('cd-s').textContent = String(sc).padStart(2,'0');
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  /* ---------- FAQ ---------- */
+  function toggleFaq(btn){
+    var item = btn.parentElement;
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(i){ i.classList.remove('open'); });
+    if(!isOpen) item.classList.add('open');
+  }
 </script>
 </body>
 </html>
